@@ -1,0 +1,12 @@
+{
+  "enablePullDownRefresh": true, 
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTitleText": "CALCULATE",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}

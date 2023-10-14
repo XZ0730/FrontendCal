@@ -1,0 +1,16 @@
+<!--pages/history/history.wxml-->
+<view>
+  <van-cell-group inset>
+  <van-cell custom-class="nbr"	border="true" title="表达式" value="结果" />
+  <van-cell custom-class="nbr" title="{{results[0].exp}}" title-width="150px" value="{{results[0].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[1].exp}}" title-width="150px" value="{{results[1].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[2].exp}}" title-width="150px" value="{{results[2].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[3].exp}}" title-width="150px" value="{{results[3].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[4].exp}}" title-width="150px" value="{{results[4].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[5].exp}}" title-width="150px" value="{{results[5].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[6].exp}}" title-width="150px" value="{{results[6].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[7].exp}}" title-width="150px" value="{{results[7].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[8].exp}}" title-width="150px" value="{{results[8].result}}"  />
+  <van-cell custom-class="nbr" title="{{results[9].exp}}" title-width="150px" value="{{results[9].result}}"  />
+</van-cell-group>
+</view>

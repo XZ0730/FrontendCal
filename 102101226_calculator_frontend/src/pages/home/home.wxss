@@ -1,0 +1,147 @@
+/* pages/home/home.wxss */
+
+.btn1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8px;
+    color: #6699FF;
+    background-color: #f5f6f8 !important;
+    border-radius: 10px;
+    border: 3rpx solid #3d54d3;  
+    height: 60px;
+    line-height: 40px;
+    width: 70%;
+}
+.option {
+  padding: 10px;
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #4d3232;
+  text-align: center;
+}
+.option:last-child {
+  border-bottom: none;
+}
+.popup {
+  position: relative;
+  bottom: 80px;
+  left: 6px;
+  width: 50px;
+  margin-top: 80px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+/* pages/Calculator/Calculator.wxss */
+.img{
+  position: absolute;
+  top: 0rpx;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+textarea {
+  width: 700rpx;
+  height: 300rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  text-align: right;
+  padding: 0rpx 20rpx;
+  display: block;
+  word-wrap: break-word;
+  white-space:normal;
+  overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 5px 5px 5px #cac8c7;
+}
+.calculateScreen {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, .3);
+  z-index: 100;
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(0, 0, 0, .3);
+  overflow: hidden;
+  /* 小程序的高斯模糊效果要加backdrop */
+  backdrop-filter: blur(20rpx);
+}
+.funBar {
+  width: 100%;
+  height: 90rpx;
+  margin-top: -20px;
+}
+.calcuProcess {
+  width: 95%;
+  height: 50rpx;
+  line-height: 30rpx;
+  font-size: 35rpx;
+  word-wrap: break-word;
+  text-align: right;
+  color: #6d5f5f;
+}
+.inputNum {
+  width: calc(100vw - 40rpx);
+  height: calc(80% - 200rpx);
+  line-height: 100rpx;
+  font-size: 50rpx;
+  text-align: right;
+  padding: 0rpx 20rpx;
+  display: block;
+  word-wrap: break-word;
+  white-space:normal;
+  overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 5px 5px 5px #cac8c7;
+}
+
+.keyboard {
+  width: 103%;
+  height: calc(70vh - 32rpx);
+  padding-top: 12rpx;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.keyboards {
+  width: 16%;
+  height: 15%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.keys {
+  width: 120rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 70rpx;
+  backdrop-filter: blur(10px);
+  /* background-color: rgba(246,245,245, .6); */
+  background: linear-gradient(145deg, rgba(235,228,228, .3), rgba(221,214,214, .2));
+  box-shadow:  10px 10px 20px #8d8888,
+             -10px -10px 20px #e2dfdf;
+  color: #fff;
+  text-shadow: 5px 5px 5px #992002;
+}
+.hoverkeys {
+  background: linear-gradient(145deg, rgba(221,214,214, .6), rgba(235,228,228, .7));
+  box-shadow:  10px 10px 30px #302a2a,
+             -10px -10px 30px #726060;
+}
+
+/* .keyboards:nth-child(25) {
+  width: 32.5%;
+}
+.keyboards:nth-child(25) .keys {
+  width: 500rpx;
+  border-radius: 130rpx;
+} */

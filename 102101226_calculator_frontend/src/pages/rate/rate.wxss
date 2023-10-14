@@ -1,0 +1,112 @@
+/* pages/rate/rate.wxss */
+
+
+/**index.wxss**/
+ 
+input{
+  border-bottom: 1px solid rgb(20, 20, 26);
+  margin: 20px 0;
+}
+ 
+button{
+  margin-top: 20px;
+  color: rgb(20, 31, 31);
+}
+.table {
+  border: 0px solid darkgray;
+ }
+ .tr {
+  display: flex;
+  width: 100%;
+  margin-top: -75px;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+ }
+ .td {
+  width:100%;
+  height: 35px;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  border: 1rpx solid #0e0e13;
+ }
+ .bg-w{
+  background: rgb(196, 118, 118);
+ }
+ .bg-g{
+  background: #E6F3F9;
+ }
+ .bg-e{
+  background: #c7ccce;
+  margin-top: 0px;
+  align-items: center;
+  border-color: rgb(75, 77, 82);
+  height: 35px;
+ }
+ .th {
+  width: 50%;
+  justify-content: center;
+  background: #aa9966;
+  color: rgb(31, 21, 21);
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-size: 13px;
+  border: 1rpx solid #0e0e13;
+ }
+
+.putto{
+  width: 100%;
+  height: 34vh;
+  background-color: rgba(255, 255, 255, .3);
+  margin-block-end: 5px;
+  z-index: 0;
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(0, 0, 0, .3);
+  overflow: hidden;
+  /* 小程序的高斯模糊效果要加backdrop */
+  backdrop-filter: blur(20rpx);
+  margin-top: 10px;
+}
+
+.line{
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(0, 0, 0, .3);
+  background-color: rgba(255, 255, 255, .3);
+}
+.line2{
+  position: relative;
+  width: 5%;
+  margin-left:2%;
+  height: 20%;
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(0, 0, 0, .3);
+  background-color: rgba(255, 255, 255, .3);
+}
+.tab {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  font-size: 32rpx;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 5%;
+  background-color: rgb(196, 189, 187);
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(0, 0, 0, .3);
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.isActive {
+  color: #07c160;
+}
+
+.institutionalView{
+  width: 100%;
+}
+/* .line3{
+  width: 100px;
+} */

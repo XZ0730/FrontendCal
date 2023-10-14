@@ -1,0 +1,9 @@
+/* pages/history/history.wxss */
+
+
+
+
+.nbr{
+  word-wrap: break-word;
+  
+}

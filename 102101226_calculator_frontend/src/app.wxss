@@ -1,0 +1,14 @@
+/**app.wxss**/
+.container {
+  width: 98%;
+  height: 500px;
+  margin-left: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(245, 241, 240);
+  box-shadow: 6rpx 6rpx 12px 6rpx rgba(0, 0, 0, .3);
+  margin-block-end: 20px;
+  
+} 

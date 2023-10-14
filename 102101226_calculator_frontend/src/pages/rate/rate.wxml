@@ -1,0 +1,161 @@
+<!--pages/rate/rate.wxml-->
+
+
+
+
+<!-- <view class="title">Rate</view> -->
+<view class="container">
+  <view class="institutionalView">
+  <view class="tab">
+    <view class="{{item.isActive?'isActive':''}}" wx:for="{{ tabs }}" wx:key="id" data-index="{{index}}" bind:tap="changeTab">{{ item.name }}</view>
+  </view>
+<block wx:if="{{tabs[0].isActive}}">
+  <view class="putto">
+      <view class="box">
+        <van-cell-group>
+         <van-field
+          value="{{ money }}"
+          placeholder="请输入本金"
+           bind:change="onChangemoney"
+         />
+          </van-cell-group>
+          <van-cell-group>
+         <van-field
+          value="{{duration}}"
+          placeholder="请选择期限"
+           bind:tap="onClick"
+         />
+          </van-cell-group>
+      </view>
+      <button form-type="submit" class='line' bind:tap="formSubmit"><span>开始计算</span></button>
+  </view>
+  <van-cell-group>
+  <van-field
+    label="三个月(%)"
+    model:value="{{ cunkuan[0].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange1"
+    title-width="200px"
+  /><van-field
+    label="半年(%)"
+    model:value="{{ cunkuan[1].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange2"
+    title-width="200px"
+  /><van-field
+    label="一年(%)"
+    model:value="{{ cunkuan[2].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange3"
+    title-width="200px"
+  /><van-field
+    label="两年(%)"
+    model:value="{{ cunkuan[3].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur	="rateChange4"
+    title-width="200px"
+  /><van-field
+    label="三年(%)"
+    model:value="{{ cunkuan[4].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange5"
+    title-width="200px"
+  /><van-field
+    label="五年(%)"
+    model:value="{{ cunkuan[5].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange6"
+    title-width="200px"
+  />
+</van-cell-group>
+<van-popup  show="{{ show }}" round position="bottom">
+  <van-cascader
+    wx:if="{{ show }}"
+    value="{{ cascaderValue }}"
+    title="请选择期限"
+    options="{{ options }}"
+    bind:close="onClose"
+    bind:finish="onFinish"
+  />
+</van-popup>
+</block>
+  <block wx:elif="{{tabs[1].isActive}}">
+    <view class="putto">
+      <view class="box">
+        <van-cell-group>
+         <van-field
+          value="{{ money }}"
+          placeholder="请输入本金"
+           bind:change="onChangemoney"
+         />
+          </van-cell-group>
+          <van-cell-group>
+         <van-field
+          value="{{duration}}"
+          placeholder="请选择期限"
+           bind:tap="onClick2"
+         />
+          </van-cell-group>
+      </view>
+      <button form-type="submit" class='line' bind:tap="formSubmit"><span>开始计算</span></button>
+  </view>
+  <van-cell-group>
+  <van-field
+    label="六个月(%)"
+    model:value="{{ daikuan[0].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange1"
+    title-width="200px"
+  /><van-field
+    label="一年(%)"
+    model:value="{{ daikuan[1].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange2"
+    title-width="200px"
+  /><van-field
+    label="一-三年(%)"
+    value="{{ daikuan[2].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange3"
+    title-width="200px"
+  /><van-field
+    label="三-五年(%)"
+    model:value="{{ daikuan[3].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange4"
+    title-width="200px"
+  /><van-field
+    label="五年(%)"
+    model:value="{{ daikuan[4].rate }}"
+    center="true"
+    placeholder="%"
+    bind:blur="rateChange5"
+    title-width="200px"
+  />
+</van-cell-group>
+
+<van-popup  show="{{ show2 }}" round position="bottom">
+  <van-cascader
+    wx:if="{{ show2 }}"
+    value="{{ cascaderValue }}"
+    title="请选择期限"
+    options="{{ options2 }}"
+    bind:close="onClose"
+    bind:finish="onFinish"
+  />
+</van-popup>
+    </block>
+</view>
+</view>
+
+<van-popup show="{{ result_show }}" bind:close="onClose" round custom-style="width:90%;height: 5%;text-align:center">{{result}}</van-popup>

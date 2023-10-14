@@ -1,0 +1,50 @@
+<!--pages/home/home.wxml-->
+<!-- 背景图 -->
+<image class="img" src="../source/cc.webp"></image>
+
+<view bindtap="history"></view>
+<!-- 屏幕部分 -->
+
+<view class="calculateScreen">
+    <button style="width:10vw ;height: 6vh;right: 130px;" plain="true" class="btn1" bind:tap="showPopup">{{but}}</button>
+  <view wx:if="{{showPopup}}" class="popup">
+    <!-- 弹窗内容 -->
+    <view class="option" style="height: 3vh;" bind:tap="jumpRate">rate</view>
+    <view class="option" style="height: 3vh;" bind:tap="jumpHistory">记录</view>
+  </view>
+   <!-- 功能栏 -->
+  <view class="funBar"></view>
+  <!-- 计算过程 -->
+  <view class="calcuProcess">
+    {{pre_expression}}
+  </view>
+  <!-- 结果和输入 -->
+  <textarea value="{{resultNum}}" />
+  <!-- <view class="inputNum">
+    {{ resultNum }}
+  </view>   -->
+</view>
+<!-- 键盘界面 -->
+<view class="keyboard">
+    <view class="keyboards" wx:for="{{ keysdata }}" wx:key="index">
+        <view class="keys" data-num="{{ item }}" hover-class="hoverkeys"
+        hover-stay-time="100" bindtap="keyClick" >
+                {{ item.name }}
+        </view>
+    </view>
+</view>
+<!-- <van-popup show="{{ showlist }}" bind:close="onListClose">
+  <van-cell-group inset>
+  <van-cell title="表达式" center="true" value="结果" />
+  <van-cell title="1+0+999+sin(30)" value="1000.5"  />
+  <van-cell title="1+0+999+sin(30)"  value="" />
+  <van-cell title="1+0+999+sin(30)"  value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+  <van-cell title="1+0+999+sin(30)" title-width="150px" value="内容" />
+</van-cell-group>
+</van-popup> -->

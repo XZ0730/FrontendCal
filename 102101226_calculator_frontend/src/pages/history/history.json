@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true, 
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f70",
+  "navigationBarTitleText": "History",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}
